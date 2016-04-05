@@ -8,11 +8,13 @@
 				$html .= '<div class="img_perso" style="background-image: url(\'/assets/img/'. $perso->getInfo('image') .'\');"></div>';
 				$html .= '<h2>' . $perso->getInfo( 'name' ) . '</h2>';
 				$html .= '<div class="stat">';
-					$html .= '<strong class="key_stat">Vie</strong> <em class="val_stat">'. $perso->getInfo('vie') .'</em>';
-					$html .= '<strong class="key_stat">Force</strong> <em class="val_stat">'. $perso->getInfo('force') .'</em>';
-					$html .= '<strong class="key_stat">Défense</strong> <em class="val_stat">'. $perso->getInfo('defense') .'</em>';
-					$html .= '<strong class="key_stat">Vitesse</strong> <em class="val_stat">'. $perso->getInfo('vitesse') .'</em>';
-					$html .= '<strong class="key_stat">Precision</strong> <em class="val_stat">'. $perso->getInfo('precision') .'</em>';
+
+					$html .= '<strong class="key_stat" title="Vie"><i class="icon vie_icon fa fa-heart"></i><em class="val_stat" style="width:'. $perso->getInfo('vie') .'%;"></em></strong>';
+					$html .= '<strong class="key_stat" title="Force"><i class="icon vie_icon fa fa-heart"></i><em class="val_stat" style="width:'. $perso->getInfo('force') .'%;"></em></strong>';
+					$html .= '<strong class="key_stat" title="Défense"><i class="icon defense_icon fa fa-shield"></i><em class="val_stat" style="width:'. $perso->getInfo('defense') .'%;"></em></strong>';
+					$html .= '<strong class="key_stat" title="Vitesse"><em class="val_stat" style="width:'. $perso->getInfo('vitesse') .'%;"></em></strong>';
+					$html .= '<strong class="key_stat" title="Précision"><em class="val_stat" style="width:'. $perso->getInfo('precision') .'%;"></em></strong>';
+
 					$html .= '<em class="spec_stat">'. $perso->getInfo('spec') .' amélioré !</em>';
 				$html .= '</div>';
 

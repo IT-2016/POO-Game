@@ -12,7 +12,7 @@ body{background-color:#393939;font-family:sans-serif;}
 	&.unsuccess{ background-color: rgb(209,72,65);  }
 }
 
-.warp{max-width:1200px;margin:3% auto;overflow:hidden;height:583px;}
+.warp{max-width:1200px;margin:3% auto;overflow:hidden;height:603px;}
 
 .perso{
 	width: 25%;
@@ -27,7 +27,7 @@ body{background-color:#393939;font-family:sans-serif;}
 		height: 280px;
 		background-position: 50%;
 		background-repeat: no-repeat;
-		background-size: 80%;
+		background-size: 75%;
 		margin: 0 auto;
 	}
 	h2{
@@ -38,9 +38,25 @@ body{background-color:#393939;font-family:sans-serif;}
 	.stat{
 		padding: 5px 0;
 		text-align: center;
-		overflow: auto;
-		.key_stat{width: 50%;display:inline-block;float: left;}
-		.val_stat{width: 50%;display:inline-block;float: left;font-weight: 900;font-style: normal;}
+		.key_stat{
+			width: 100%;
+			display: inline-block;
+			height: 10px;
+			margin: 5px 0;
+			background-color: #303030;
+			position: relative;
+		}
+		.val_stat{display:block;height: 10px;background-color: rgba(164,0,181,0.5);position: absolute;}
+		.icon{
+			position: absolute;
+			z-index: 10;
+			left: -5px;
+			top: -8px;
+			font-size: 30px;
+			display: none;
+			&.vie_icon{color:#C00;}
+			&.defense_icon{color:#C80;}
+		}
 		.spec_stat{width: 100%;display:inline-block;float: left;font-weight: 900;font-style: normal;margin-top: 20px;color: rgb(251,160,38);}
 	}
 	form{

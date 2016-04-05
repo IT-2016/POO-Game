@@ -4,16 +4,24 @@
 		protected $class = '_ARC';
 		protected $image = 'arc.png';
 		protected $name = 'Foyz';
-		protected $force = 20;
-		protected $defense = 12;
-		protected $vitesse = 70;
-		protected $vie = 80;
-		protected $precision = 60;
+		protected $force = 25;
+		protected $defense = 20;
+		protected $vitesse = 65;
+		protected $precision = 80;
 		protected $spec = 'Précision';
 
 
 		function __construct()
 		{
-			
+			// $this->setPerso(array(
+			// 		'type' => $this->class,
+			// 		'image' => $this->image,
+			// 		'name' => $this->name,
+			// 		'force' => $this->force,
+			// 		'defense' => $this->defense,
+			// 		'vitesse' => $this->vitesse,
+			// 		'precision' => $this->precision,
+			// 		'spec' => $this->spec
+			// 	));
 		}
 	}

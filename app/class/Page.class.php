@@ -1,4 +1,5 @@
 <?php
+
 class Page {
 	public $nameProject = 'GAME';
 
