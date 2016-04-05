@@ -1,0 +1,16 @@
+<?php
+    /* Attaque */
+    if (((rand(1, 100) * ($infos['a']['hab'] - 80)) - (rand(1, 100) * ($infos['c']['esq'] - 80))) > 0) {
+    	$damage = round(rand(2,5) * max(1, $infos['a']['forc'] + $infos['a']['a_atk'] - 60) / max(1, $infos['c']['res'] + $infos['c']['a_dfs'] - 60));
+    	$damage = min(100, max(1, $damage));
+    	if($damage >= $infos['c']['hp']){$damage = $infos['c']['hp'];}
+    }else {$damage = 0;}
+    $infos['c']['degat'] = $damage;
+    $infos['c']['newhp'] = $infos['c']['hp'] - $infos['c']['degat'];
+    /* Riposte */
+    if (((rand(1, 100) * ($infos['c']['hab'] - 80)) - (rand(1, 100) * ($infos['a']['esq'] - 80))) > 0) {
+    	$damage6 = min(round((rand(2, 7) * ($infos['c']['forc'] + $infos['c']['a_atk'] - 50) / ($infos['a']['res'] + $infos['a']['a_dfs'] - 50)) / 2), ($infos['a']['hp'] - 1));
+    	if($damage6 >= $infos['a']['hp']){$damage6 = $infos['a']['hp'];}
+    } else {$damage6 = 0;}
+    $infos['a']['degat'] = $damage6;
+    $infos['a']['newhp'] = $infos['a']['hp'] - $infos['a']['degat'];
