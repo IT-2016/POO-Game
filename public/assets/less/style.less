@@ -1,0 +1,65 @@
+*{padding:0;margin:0;box-sizing:border-box;}
+@import url('mixins');
+@import url('global');
+body{background-color:#393939;font-family:sans-serif;}
+
+.notif{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	color:#FFF;
+	&.success{ background-color:rgb(65,168,95);  }
+	&.unsuccess{ background-color: rgb(209,72,65);  }
+}
+
+.warp{max-width:1200px;margin:3% auto;overflow:hidden;height:583px;}
+
+.perso{
+	width: 25%;
+	display: inline-block;
+	float: left;
+	background-color: #292929;
+	color: #FFF;
+	&:hover{background-color: #555;}
+	padding: 10px;
+	.img_perso{
+		width: 280px;
+		height: 280px;
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: 80%;
+		margin: 0 auto;
+	}
+	h2{
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+	}
+	.stat{
+		padding: 5px 0;
+		text-align: center;
+		overflow: auto;
+		.key_stat{width: 50%;display:inline-block;float: left;}
+		.val_stat{width: 50%;display:inline-block;float: left;font-weight: 900;font-style: normal;}
+		.spec_stat{width: 100%;display:inline-block;float: left;font-weight: 900;font-style: normal;margin-top: 20px;color: rgb(251,160,38);}
+	}
+	form{
+		text-align: center;
+		button{
+			display: inline-block;
+			padding: 10px 15px;
+			text-transform: uppercase;
+			border: none;
+			margin: 5px;
+			cursor: pointer;
+			font-weight: 700;
+			color: #FFF;
+			&.choix{background-color: rgb(44,130,201); &:hover{background-color: rgb(41,105,176);}}
+			&.attaque{
+				display: none;
+				background-color: rgb(184,49,47);
+				&:hover{background-color: rgb(225,73,56);}
+			}
+		}
+	}
+}
