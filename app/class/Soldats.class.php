@@ -1,8 +1,7 @@
 <?php
-	class Guerriers extends Personnages
+	class Soldats extends Personnages
 	{
-		protected $class = '_GUR';
-
+		protected $class = '_SOL';
 
 		function __construct($DB)
 		{

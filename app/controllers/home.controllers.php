@@ -1,12 +1,12 @@
 <?php
 	
 	$_PERSO = array(
-		$_ARC = new Archers(),
-		$_GUR = new Guerriers(),
-		$_CVL = new Cavaliers(),
-		$_MAG = new Magiciens()
+		$_ARC = new Archers($_DB),
+		$_GUR = new Guerriers($_DB),
+		$_CVL = new Cavaliers($_DB),
+		$_MAG = new Magiciens($_DB),
+		$_SOL = new Soldats($_DB)
 	);
-	$_SESSION['PERSO'] = $_PERSO;
 
 	if(isset($_POST['atk']) && $_POST['atk'] == 'attak'){
 

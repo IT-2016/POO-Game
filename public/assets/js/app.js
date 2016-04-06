@@ -21,4 +21,15 @@ $(function(){
 		$('.myperso').val(myperso);
 	});
 
+	$('.armory').click(function() {
+		armoryId = $(this).attr('armory-id');
+		armoryType = $(this).attr('armory-type');
+		armoryPerso = $(this).attr('armory-perso');
+
+		$('.armory[armory-perso="'+ armoryPerso +'"]').removeClass('active');
+		$(this).addClass('active');
+
+		$('.inarmory').val(armoryId);
+	});
+
 });
