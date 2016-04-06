@@ -1,0 +1,106 @@
+*{padding:0;margin:0;box-sizing:border-box;}
+@import url('mixins');
+@import url('global');
+body{background-color:#393939;font-family:sans-serif;}
+
+.notif{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	color:#FFF;
+	&.success{ background-color:rgb(65,168,95);  }
+	&.unsuccess{ background-color: rgb(209,72,65);  }
+	&.infonoif{ background-color: rgb(84,172,210);  }
+}
+
+.warp{max-width:1200px;margin:3% auto;overflow:hidden;height:650px;}
+
+.perso{
+	width: 20%;
+	display: inline-block;
+	float: left;
+	background-color: #292929;
+	color: #FFF;
+	&:hover{background-color: #555;}
+	padding: 10px;
+	.img_perso{
+		height: 280px;
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: auto 75%;
+		margin: 0 auto;
+	}
+	h2{
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+	}
+	.stat{
+		padding: 5px 0;
+		text-align: center;
+		.key_stat{
+			width: 100%;
+			max-width: 100%;
+			overflow: hidden;
+			display: inline-block;
+			height: 10px;
+			margin: 5px 0;
+			background-color: #303030;
+			position: relative;
+		}
+		.val_stat{display:inline-block;height: 10px;background-color: rgba(164,0,181,0.5);float:left;}
+		.sup_stat{display:inline-block;height: 10px;background-color: rgba(65,168,95,0.8);float:right;}
+		.icon{
+			position: absolute;
+			z-index: 10;
+			left: -5px;
+			top: -8px;
+			font-size: 30px;
+			display: none;
+			&.vie_icon{color:#C00;}
+			&.defense_icon{color:#C80;}
+		}
+		.spec_stat{width: 100%;display:inline-block;float: left;font-weight: 900;font-style: normal;margin-top: 20px;color: rgb(251,160,38);}
+	}
+	
+	.armorys{
+		margin-top: 5px;
+		// background-color: #F50;
+		height: 50px;
+		padding: 5px;
+		text-align: center;
+		.armory{
+			width: 40px;
+			height: 40px;
+			background-position: 50%;
+			background-size: 70%;
+			background-color: #393939;
+			background-repeat: no-repeat;
+			display: inline-block;
+			margin: 5px;
+			cursor: pointer;
+			&.active{border: 2px solid #E9E9E9;background-color: #454545;}
+			&:hover{background-color: rgba(44,130,201,0.2);}
+		}
+	}
+
+	form{
+		text-align: center;
+		button{
+			display: inline-block;
+			padding: 10px 15px;
+			text-transform: uppercase;
+			border: none;
+			margin: 5px;
+			cursor: pointer;
+			font-weight: 700;
+			color: #FFF;
+			&.choix{background-color: rgb(44,130,201); &:hover{background-color: rgb(41,105,176);}}
+			&.attaque{
+				display: none;
+				background-color: rgb(184,49,47);
+				&:hover{background-color: rgb(225,73,56);}
+			}
+		}
+	}
+}
